@@ -1,4 +1,4 @@
-# Example from openVulnQuery readme
+# Example from openVulnQuery readme with minor additions
 from openVulnQuery import query_client
 from json import load
 with open('credentials.json', 'r') as config:
