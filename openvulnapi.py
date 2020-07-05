@@ -1,14 +1,8 @@
 import requests
 from json import loads
 
-# CONSTANTS
-baseurl = 'https://api.cisco.com/security/'
-authzurl = 'https://cloudsso.cisco.com/as/token.oauth2'
-with open('credentials.json', 'r') as config:
-  creds = loads(config.read())
-
-class openVulnAPI():
-  def __init__(self, client_id=creds['CLIENT_ID'], client_secret=creds['CLIENT_SECRET'], baseurl=baseurl, authzurl=authzurl):
+class openVulnAPI:
+  def __init__(self, baseurl, authzurl, client_id, client_secret):
     self.baseurl = baseurl
     self.authzurl = authzurl
     self.client_id = client_id
